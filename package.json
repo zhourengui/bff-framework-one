@@ -1,0 +1,35 @@
+{
+  "name": "bff-framework-one",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon --exec 'babel-node ./app.js'",
+    "prod": "NODE_ENV=production nodemon ./app.js",
+    "build": "babel --plugins @babel/plugin-transform-modules-systemjs ./assets/js/index.js -o ./assets/js/system_bundle.js",
+    "test:e2e": "node ./tests/e2e.test.js",
+    "test:api": "mocha ./tests/api.test.js"
+  },
+  "dependencies": {
+    "@koa/router": "^10.0.0",
+    "axios": "^0.21.1",
+    "chai": "^4.3.4",
+    "co": "^4.6.0",
+    "koa": "^2.13.1",
+    "koa-static": "^5.0.0",
+    "koa-swig": "^2.2.1",
+    "koa2-connect-history-api-fallback": "^0.1.3",
+    "log4js": "^6.3.0",
+    "mocha": "^8.3.2",
+    "supertest": "^6.1.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14",
+    "@babel/node": "^7.13.13",
+    "@babel/plugin-transform-modules-systemjs": "^7.13.8",
+    "@babel/preset-env": "^7.13.15",
+    "nodemon": "^2.0.7",
+    "playwright": "^1.10.0"
+  }
+}
